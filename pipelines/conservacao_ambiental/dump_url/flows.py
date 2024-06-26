@@ -14,9 +14,10 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
     handler_inject_bd_credentials,
 )
 
+from pipelines.conservacao_ambiental.dump_url.schedules import (
+    gsheets_year_update_schedule,
+)
 from pipelines.constants import constants
-from pipelines.conservacao_ambiental.dump_url.schedules import gsheets_year_update_schedule
-
 
 seop_gsheets_flow = deepcopy(dump_url_flow)
 seop_gsheets_flow.name = "SEOP: Concervacao Ambiental - Ingerir CSV do Google Drive"

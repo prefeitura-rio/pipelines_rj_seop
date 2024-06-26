@@ -7,9 +7,9 @@ from copy import deepcopy
 
 from prefect.run_configs import KubernetesRun
 from prefect.storage import GCS
-
-
-from prefeitura_rio.pipelines_templates.dump_earth_engine.flows import flow as dump_earth_engine_asset_flow
+from prefeitura_rio.pipelines_templates.dump_earth_engine.flows import (
+    flow as dump_earth_engine_asset_flow,
+)
 from prefeitura_rio.pipelines_utils.prefect import set_default_parameters
 from prefeitura_rio.pipelines_utils.state_handlers import (
     handler_initialize_sentry,
@@ -40,6 +40,4 @@ seop_ee_default_parameters = {
     "gcs_asset_path": "gs://rj-seop/assets/",
     "ee_asset_path": "projects/rj-seop/assets/",
 }
-seop_ee_flow = set_default_parameters(
-    seop_ee_flow, default_parameters=seop_ee_default_parameters
-)
+seop_ee_flow = set_default_parameters(seop_ee_flow, default_parameters=seop_ee_default_parameters)
