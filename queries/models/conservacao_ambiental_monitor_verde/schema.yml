@@ -1,0 +1,44 @@
+version: 2
+models :
+  - name: alertas_desmatamento
+    description: "**Descrição**: Alertas de Desmatamento do Monitor Verde\n**Frequência\
+      \ de atualização**: Nunca\n**Cobertura temporal**: Não Informado\n**Órgão gestor\
+      \ dos dados**: Não Informado\n**Publicado por**: Não Informado\n**Publicado\
+      \ por (email)**: user@gmail.com\n"
+    columns:
+      - name: id_global
+        description: identificacao unica para cada entrada
+      - name: id_boletim
+        description: ID do boletim
+      - name: periodo_boletim
+        description: Periodo de cobertura do boletim
+      - name: periodo
+        description: Periodo
+      - name: nome_regiao_administrativa
+        description: Nome região adm
+      - name: id_regiao_administrativa
+        description: ID região adm
+      - name: id_area_planejamento
+        description: ID area adm
+      - name: nome_bairro
+        description: Nome do bairro
+      - name: id_bairro
+        description: ID do bairro
+      - name: acesso_local
+        description: Acesso local
+      - name: tipo_local
+        description: Tipo do local
+      - name: observacao
+        description: Observação
+      - name: nome_unidade_conservacao
+        description: Nome da unidade de conservação
+      - name: area
+        description: Area do poligono
+      - name: latitude
+        description: Latitude
+      - name: longitude
+        description: Longitude
+      - name: geometria_wkt
+        description: Geometria original
+      - name: geometria
+        description: Geometria
