@@ -1,5 +1,5 @@
-SELECT 
-    SAFE_CAST(globalid AS STRING) id_global, # identificacao unica para cada entrada 
+SELECT
+    SAFE_CAST(globalid AS STRING) id_global, # identificacao unica para cada entrada
     SAFE_CAST(boletim AS STRING) id_boletim,
     SAFE_CAST(boletim_pe AS STRING) periodo_boletim, # periodo de cobertura do boletim
     SAFE_CAST(periodo AS STRING) periodo, # TODO: converter para ultimo mes de referencia
@@ -15,6 +15,6 @@ SELECT
     SAFE_CAST(area AS FLOAT64) area,
     SAFE_CAST(latitude AS FLOAT64) latitude,
     SAFE_CAST(longitude AS FLOAT64) longitude,
-    SAFE_CAST(geometry AS STRING) geometria_wkt, 
-    SAFE.ST_GEOGFROMTEXT(geometry) AS geometry, 
+    SAFE_CAST(geometry AS STRING) geometria_wkt,
+    SAFE.ST_GEOGFROMTEXT(geometry) AS geometry,
 FROM rj-seop.conservacao_ambiental_monitor_verde_staging.alertas_desmatamento
